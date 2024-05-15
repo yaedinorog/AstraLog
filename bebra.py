@@ -1,12 +1,12 @@
 from tkinter import *
 from tkinter import ttk, filedialog
-from PIL import ImageTk
 from random import *
 from datetime import datetime, timedelta
 import pandas as pd
 import os.path
+import re
 
-def analyze_logs():
+def analyze_logs(): #функция анализа логов
     log_file = search_entry.get() 
     log_level = log_level_var.get() 
     time_interval = int(time_button.get()) 
@@ -42,7 +42,7 @@ def analyze_logs():
     else: 
         result_text.insert(END, "Ошибок не найдено.")
 
-def info_but(): 
+def info_but(): #функция вызова окна с информацией
     info_window = Tk() 
     info_window.title("Справка") 
     info_window.geometry("250x500") 
@@ -53,10 +53,10 @@ def open_file():
         search_entry.delete(0, END) 
         search_entry.insert(0, filename) 
 
-root = Tk() 
+root = Tk() #Создание основного окна
 root.title("Анализатор данных") 
 
-menu_frame = Frame(root) 
+menu_frame = Frame(root) #Создание контейнера для менюшки
 menu_frame.pack(fill=X)  
 
 info_button = ttk.Button(menu_frame, text="info", command=info_but) 

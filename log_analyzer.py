@@ -1,9 +1,8 @@
-import pandas as pd
-import data as data
-
+import data
 import arg_parser
 import time
 import os
+import pandas as pd
 
 
 # function for analyze log files
