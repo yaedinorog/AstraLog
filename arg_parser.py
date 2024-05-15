@@ -16,8 +16,8 @@ def parser_args():
     parser.add_argument("log_file", type=str, help="Path to log file.")
     # Levels for logs
     parser.add_argument("-l", "--level", metavar="", type=str, default="INFO",
-                        choices=["ERROR", "DEBUG", "INFO", "WARNING", "warning", "Warning","error"],
-                        help="Level logs for searching (choices {).")
+                        choices=["ERROR", "error", "Error" "DEBUG", "Debug", "debug" "INFO", "Info", "info", "WARNING", "warning", "Warning"],
+                        help="Level logs for searching Error, Debug, Warning, Info.")
     # Time for logs
     parser.add_argument("-t", "--time", metavar="", type=int, default=30,
                         help="Selecting the time from which to show logs. (In minutes)")
